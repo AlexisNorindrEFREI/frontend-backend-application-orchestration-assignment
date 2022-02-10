@@ -19,7 +19,6 @@ pipeline {
         }
         stage('Checkout') {
             steps {
-                sh 'git remote add origin https://{username}:{password}@github.com/AlexisNorindrEFREI/frontend-backend-application-orchestration-assignment.git'
                 sh 'git checkout release'
                 sh 'git merge origin/dev'
                 sh 'git push origin release'
