@@ -17,7 +17,7 @@ pipeline {
                 sh 'docker-compose down'
             }
         }
-        stage('Checkout') {
+        stage('Merge dev with release and push release') {
             steps {
                 sh 'git checkout release'
                 sh 'git merge origin/dev'
